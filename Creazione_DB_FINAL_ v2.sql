@@ -70,7 +70,7 @@ CREATE TABLE cin.Biglietto(
 /**CREA TABELLA FILM**/
 CREATE TABLE cin.Film(
     ID_Film SERIAL,
-    Titolo VARCHAR(16),
+    Titolo VARCHAR(60),
     Anno int,
     Regista VARCHAR(16),
 
