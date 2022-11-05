@@ -25,7 +25,7 @@ INSERT INTO cin.sala(numero, schermo, impiantoaudio, impiantovideo, dimensione, 
             (2, 'Ignifugo Norma Europea EN13501-1', 'Sony', 'Sony SRX-R510DB', '220', 3),
             (3, 'Ignifugo Norma Europea EN13501-1', 'Yamaha', 'Sony SRX-R510DR', '110', 3),
             (4, 'Ignifugo Norma Europea EN13501-1', 'Yamaha', 'Sony SRX-R510D3', '330', 3),
-            (5, 'Ignifugo Norma Europea EN13501-1', 'Sony', 'Sony SRX-R510DG', '210', 3),
+            (5, 'Ignifugo Norma Europea EN13501-1', 'Sony', 'Sony SRX-R510DG', '210', 3)
 );
             /*(6, 'Ignifugo Norma Europea EN13501-1', 'Toshiba', 'Sony SRX-R510DF', '2700', 3)
 );
