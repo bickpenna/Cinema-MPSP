@@ -1,0 +1,35 @@
+\documentclass{report}
+\usepackage[utf8]{inputenc}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage[italian]{babel}
+\usepackage{hyperref}
+\usepackage{multirow}
+\usepackage{tikz}
+
+
+\tikzstyle{mybox} = [draw=black, very thick, rectangle, rounded corners, inner ysep=5pt, inner xsep=5pt]
+
+\begin{document}
+    \begin{figure}[htbp!]
+        \begin{center}
+            \includegraphics[width=.25\textwidth]{Immagini/FedericoII.png}
+        \end{center}
+    \end{figure}
+    
+    \begin{center}
+        {\scshape\Large\bfseries Cinema Multisala}
+    \end{center}
+    
+    \begin{center}
+        Simone Parente Martone Mario Penna \\  N86004297 N86003308 \\ 19/10/2022
+    \end{center}
+    
+    \newpage
+    
+    \tableofcontents
+    
+    \include{Argomenti/Capitolo1}
+    \include{Argomenti/Capitolo2}
+    \include{Argomenti/Capitolo3}
+\end{document}

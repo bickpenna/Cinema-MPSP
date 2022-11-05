@@ -1,0 +1,47 @@
+\chapter{Requisiti identificati}
+    Si provvederà alla progettazione ed allo sviluppo di una base di dati dedicata alla gestione di un Cinema Multisala, nello specifico:
+    
+        Gestione di Proiezioni di Film, di Spot pubblicitari e Anteprime di Film all'interno di Sale.
+    \newpage
+    \section{Analisi dei requisiti}
+    
+    Sono state individuate le seguenti entità:
+    
+    
+    \begin{table}[!h]
+        \begin{tabular}{|l | p{0.5\textwidth}|}
+        \hline
+            Cinema &  Sede di un cinema \\
+            \hline
+            Sala &  Caratteristiche tecniche di una sala \\
+            \hline
+            Posto & Entità atta a identificare univocamente una poltrona\\
+            \hline
+            Proiezione & Data e ora di una proiezione \\
+            \hline
+            Film & Entità che descrive le generalità di un film \\ 
+            \hline
+            Anteprima & Trailer di un film. \\
+            \hline
+            Spot & Entità che identifica univocamente messaggi pubblicitari
+            da parte di aziende \\
+            \hline
+             Biglietto & Entità che si occupa della vendita di un posto in sala \\ 
+            \hline
+            Vendita & Generalizzazione di una vendita online e una vendita al botteghino \\
+            \hline
+            Vendita online & Specializzazione di una vendita \\
+            \hline
+            Vendita botteghino & Specializzazione di una vendita \\
+            \hline
+            Prenotazione & Entità che identifica un biglietto prenotato ma non ancora pagato (?) \\
+            \hline
+            Cliente & Entità atta a identificare univocamente una persona che ha acquistato un biglietto online \\
+            \hline
+            Feedback & Recensione di un film da parte di un cliente \\ 
+            \hline
+        \end{tabular}
+        \caption{Entità}
+        \label{entita}
+    \end{table}
+    
