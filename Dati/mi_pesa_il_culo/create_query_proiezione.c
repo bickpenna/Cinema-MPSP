@@ -43,7 +43,7 @@ void main()
         giorno=f_giorno(anno, mese);
         orainizio=(rand() % (21 - 16 + 1)) + 16;
         orafine=orainizio+2;
-        sala=(rand() % (25 - 1 + 1)) + 1;
+        sala=(rand() % (15 - 1 + 1)) + 1;
         film=(rand() % (17 - 1 + 1)) + 1;
 
         if(giorno==0) exit(-1);
