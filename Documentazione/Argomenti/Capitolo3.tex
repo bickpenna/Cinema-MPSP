@@ -12,20 +12,21 @@ Cinema: \underline{ID\_Cinema} - Nome - indrizzoCittà - NumTelefono
 };
 \end{tikzpicture}%
 
-\hspace{1cm}
+\hspace{0.5cm}
 
 \hspace*{-5mm}\begin{tikzpicture}
 \node [mybox] (box){%
     \begin{minipage}{.96\textwidth}
 
-Sala:\underline{ID\_Sala} - Numero - Schermo - ImpiatoAudio - ImpiantoVideo - Dimensione - Cinema
+Sala: \underline{ID\_Sala} - Numero - Schermo - ImpiatoAudio - ImpiantoVideo - Dimensione - Cinema
     \end{minipage}
 };
 \end{tikzpicture}%
 
 Cinema $\hookrightarrow$ Cinema(ID\_Cinema)
 
-\hspace{1cm}
+
+\hspace{0.5cm}
 
 \hspace*{-5mm}\begin{tikzpicture}
 \node [mybox] (box){%
@@ -38,27 +39,9 @@ Posto:  \underline{Fila} - \underline{Numero} - \underline{Sala}
 \end{tikzpicture}%
 
 Sala $\hookrightarrow$ Sala(ID\_Sala)
-\hspace{1cm}
 
-\hspace*{-5mm}\begin{tikzpicture}
-\node [mybox] (box){%
-    \begin{minipage}{.96\textwidth}
 
-Biglietto: \underline{ID\_Biglietto} - DataEmissione - Prezzo - Modalità\_acq - Fila - Numero - Sala - Proiezione - Username
-
-    \end{minipage}
-};
-\end{tikzpicture}%
-
-Fila $\hookrightarrow$ Posto(Fila)
-
-Numero $\hookrightarrow$ Posto(Numero)
-
-Sala $\hookrightarrow$ Posto(Numero)
-
-Username $\hookrightarrow$ Cliente(Username)
-
-\hspace{1cm}
+\hspace{0.5cm}
 
 \hspace*{-5mm}\begin{tikzpicture}
 \node [mybox] (box){%
@@ -70,7 +53,44 @@ Cliente: \underline{Username} - Password - DataRegistrazione
 };
 \end{tikzpicture}%
 
-\hspace{1cm}
+\hspace{0.5cm}
+
+\hspace*{-5mm}\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{.96\textwidth}
+
+Biglietto: \underline{ID\_Biglietto} - DataEmissione - Prezzo - Modalità\_acquisto - Fila - Numero - Sala - Proiezione - Username
+
+    \end{minipage}
+};
+\end{tikzpicture}%
+
+Fila $\hookrightarrow$ Posto(Fila)
+
+Numero $\hookrightarrow$ Posto(Numero)
+
+Sala $\hookrightarrow$ Posto(Sala)
+
+Username $\hookrightarrow$ Cliente(Username)
+
+Proiezione $\hookrightarrow$ Proiezione(ID\_Proiezione)
+
+\hspace{0.5cm}
+
+
+\hspace*{-5mm}\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{.96\textwidth}
+
+Film: \underline{ID\_Film} - Titolo - Anno - Regista
+
+    \end{minipage}
+};
+\end{tikzpicture}%
+
+
+
+\hspace{0.5cm}
 
 \hspace*{-5mm}\begin{tikzpicture}
 \node [mybox] (box){%
@@ -86,23 +106,56 @@ Username $\hookrightarrow$ Cliente(Username)
 
 Film $\hookrightarrow$ Film(ID\_Film)
 
-\hspace{1cm}
 
-
+\hspace{0.5cm}
 
 \hspace*{-5mm}\begin{tikzpicture}
 \node [mybox] (box){%
     \begin{minipage}{.96\textwidth}
 
-Spot: \underline{ID\_Spot} - Azienda - Durata - Proiezione
+Attore: \underline{ID\_Attore} - Nome - Cognome - DataNascita
 
     \end{minipage}
 };
 \end{tikzpicture}%
 
-Proiezione $\hookrightarrow$ Proiezione(ID\_Proiezione)
 
-\hspace{1cm}
+\hspace{0.5cm}
+
+\hspace*{-5mm}\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{.96\textwidth}
+
+Recita: Attore - Film
+
+    \end{minipage}
+};
+\end{tikzpicture}%
+
+Attore $\hookrightarrow$ Attore(ID\_Attore)
+
+Film $\hookrightarrow$ Film(ID\_Film)
+
+
+
+\hspace{0.5cm}
+
+\hspace*{-5mm}\begin{tikzpicture}
+\node [mybox] (box){%
+    \begin{minipage}{.96\textwidth}
+
+Proiezione: \underline{ID\_Proiezione} -  Data - OraInzio - OraFine - Sala - Film
+
+    \end{minipage}
+};
+\end{tikzpicture}%
+
+Sala $\hookrightarrow$ Sala(ID\_Sala)
+
+Film $\hookrightarrow$ Film(ID\_Film)
+
+
+\hspace{0.5cm}
 
 \hspace*{-5mm}\begin{tikzpicture}
 \node [mybox] (box){%
@@ -118,48 +171,29 @@ Proiezione $\hookrightarrow$ Proiezione(ID\_Proiezione)
 
 Film $\hookrightarrow$ Film(ID\_Film)
 
-\hspace{1cm}
 
 
-\hspace*{-5mm}\begin{tikzpicture}
-\node [mybox] (box){%
-    \begin{minipage}{.96\textwidth}
 
-Film: \underline{ID\_Film} - Titolo - Anno - Regista
+\hspace{0.5cm}
 
-    \end{minipage}
-};
-\end{tikzpicture}%
 
-\hspace{1cm}
 
 \hspace*{-5mm}\begin{tikzpicture}
 \node [mybox] (box){%
     \begin{minipage}{.96\textwidth}
 
-Attore: \underline{Nome} - \underline{Cognome} - \underline{DataNascita} - Film
+Spot: \underline{ID\_Spot} - Azienda - Durata - Proiezione
 
     \end{minipage}
 };
 \end{tikzpicture}%
 
-Film $\hookrightarrow$ Film(ID\_Film)
+Proiezione $\hookrightarrow$ Proiezione(ID\_Proiezione)
 
-\hspace{1cm}
 
-\hspace*{-5mm}\begin{tikzpicture}
-\node [mybox] (box){%
-    \begin{minipage}{.96\textwidth}
 
-Proiezione: \underline{ID\_Proiezione} -  Data - OraInzio - OraFine - Sala - Film
 
-    \end{minipage}
-};
-\end{tikzpicture}%
 
-Sala $\hookrightarrow$ Sala(ID\_Sala)
-
-Film $\hookrightarrow$ Film(ID\_Film)
 
 
 
