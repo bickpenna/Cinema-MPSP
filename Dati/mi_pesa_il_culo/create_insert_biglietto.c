@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
+
 
 int f_giorno(int anno, int mese)
 {
@@ -30,7 +32,8 @@ int f_giorno(int anno, int mese)
 
 char *f_username()
 {
-    int n=(rand() % (8 - 1 + 1)) + 1;
+    char *nome;
+    int n=(rand() %7) + 1;
     if(n==1) return "bickpenna";
     if(n==1) return "ssimone-p";
     if(n==2) return "Goku";
@@ -56,8 +59,8 @@ int main()
     int anno=0, mese=0, giorno=0;
     float prezzo=0;
     int numero_posto=0, numero_proiezione=0, sala=0;
-    char fila, *username, *mod_acquisto;
-    for(int i=0; i<100; i++)
+    char fila, *username=0, *mod_acquisto=0;
+    for(int i=0; i<500; i++)
     {
         anno=(rand() % (2022 - 2002 + 1)) + 2002;
         mese=(rand() % 12) + 1;
@@ -69,7 +72,7 @@ int main()
         sala=(rand() % (15 - 1 + 1)) + 1;
         username=f_username();
         mod_acquisto=f_mod_acquisto();
-        fprintf(fp, "'%d-%d-%d', %d, '%s', %c, %d, %d, %d, '%s'\n", anno, mese, giorno, prezzo, mod_acquisto, fila, numero_posto, numero_proiezione, username);
+        fprintf(fp, "('%d-%d-%d', %.2f, '%s', %c, %d, %d, %d, '%s'),\n", anno, mese, giorno, prezzo, mod_acquisto, fila, numero_posto, sala, numero_proiezione, username);
     }
 
     fclose(fp);
