@@ -60,19 +60,19 @@ int main()
     float prezzo=0;
     int numero_posto=0, numero_proiezione=0, sala=0;
     char fila, *username=0, *mod_acquisto=0;
-    for(int i=0; i<500; i++)
+    for(int i=0; i<100; i++)
     {
         anno=(rand() % (2022 - 2002 + 1)) + 2002;
         mese=(rand() % 12) + 1;
         giorno=f_giorno(anno, mese);
-        fila=(rand() % ('a' - 'j' + 1)) + 'a';
+        fila=(rand() % ('A' - 'H' + 1)) + 'A';
         numero_posto=(rand()%9)+1;
         numero_proiezione=(rand()%500) +1;
         prezzo=(rand()%(50 - 30 + 1))+30;
         sala=(rand() % (15 - 1 + 1)) + 1;
         username=f_username();
         mod_acquisto=f_mod_acquisto();
-        fprintf(fp, "('%d-%d-%d', %.2f, '%s', %c, %d, %d, %d, '%s'),\n", anno, mese, giorno, prezzo, mod_acquisto, fila, numero_posto, sala, numero_proiezione, username);
+        fprintf(fp, "('%d-%d-%d', %.2f, '%s', '%c', %d, %d, %d, '%s'),\n", anno, mese, giorno, prezzo, mod_acquisto, fila, numero_posto, sala, numero_proiezione, username);
     }
 
     fclose(fp);
