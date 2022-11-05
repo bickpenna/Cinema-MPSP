@@ -18,8 +18,8 @@ CREATE TABLE cin.Sala(
 	ID_Sala SERIAL,
 	Numero INTEGER,
     Schermo VARCHAR(64),
-    ImpiantoAudio VARCHAR(16),
-    ImpiantoVideo VARCHAR(16),
+    ImpiantoAudio VARCHAR(32),
+    ImpiantoVideo VARCHAR(32),
     Dimensione DOUBLE PRECISION,
     Cinema SERIAL,  --FK
 
