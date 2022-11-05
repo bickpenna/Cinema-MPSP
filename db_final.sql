@@ -1,7 +1,8 @@
 CREATE SCHEMA cin;
 
 /**CREA TABELLA CINEMA**/
-CREATE TABLE cin.Cinema(
+CREATE TABLE cin.Cinema
+(
     ID_Cinema SERIAL,
     Nome VARCHAR(32),
     IndirizzoCitta VARCHAR(60),
@@ -29,7 +30,8 @@ CREATE TABLE cin.Sala(
 
 
 /**CREA TABELLA POSTO**/
-CREATE TABLE cin.Posto(
+CREATE TABLE cin.Posto
+(
     Fila CHAR,
     Numero INTEGER,
     Sala SERIAL,  --FK
@@ -40,7 +42,8 @@ CREATE TABLE cin.Posto(
 /*-------------------------------*/
 
 /**CREA TABELLA CLIENTE**/
-CREATE TABLE cin.Cliente(
+CREATE TABLE cin.Cliente
+(
     username VARCHAR(16),
     password VARCHAR(16),
     dataRegistrazione DATE,
@@ -51,7 +54,8 @@ CREATE TABLE cin.Cliente(
 
 /**CREA TABELLA BIGLIETTO**/
 CREATE TYPE cin.Modalità_Acquisto as enum ('Online', 'Prenotato', 'Botteghino');
-CREATE TABLE cin.Biglietto(
+CREATE TABLE cin.Biglietto
+(
     ID_Biglietto SERIAL,
     DataEmissione DATE,
     Prezzo DOUBLE PRECISION,
@@ -79,7 +83,8 @@ CREATE TABLE cin.Film(
 /*-------------------------------*/
 
 /**CREA TABELLA RECENSIONE**/
-CREATE TABLE cin.Recensione(
+CREATE TABLE cin.Recensione
+(
     ID_Recensione SERIAL,
     Data DATE,
     Testo VARCHAR(250),
@@ -93,16 +98,25 @@ CREATE TABLE cin.Recensione(
 /*-------------------------------*/
 
 /**CREA TABELLA ATTORI**/
-CREATE TABLE cin.Attore(
+CREATE TABLE cin.Attore
+(
+    ID_Attore SERIAL,
     Nome VARCHAR(16),
-    cognome VARCHAR(16),
+    Cognome VARCHAR(16),
     DataNascita DATE,
-    Film SERIAL,        --FK
 
-    CONSTRAINT attori_pk PRIMARY KEY (nome, cognome, dataNascita),
-    CONSTRAINT film_fk FOREIGN KEY (film) REFERENCES cin.film(ID_film)
+    CONSTRAINT Attore_PK PRIMARY KEY(ID_Attore)
 );
 /*-------------------------------*/
+
+CREATE TABLE cin.Recita
+(
+    Attore SERIAL,     --FK
+    Film   SERIAL,     --FK
+
+    CONSTRAINT recita_att_fk  FOREIGN KEY (Attore) REFERENCES cin.Attore(ID_Attore),
+    CONSTRAINT recita_film_fk FOREIGN KEY (Film)   REFERENCES cin.Film(ID_Film)
+);
 
 /**CREA TABELLA PROIEZIONE**/
 CREATE TABLE cin.Proiezione(
