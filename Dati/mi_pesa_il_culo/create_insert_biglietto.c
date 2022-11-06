@@ -43,7 +43,7 @@ char *f_username()
     if(n==7) return "giorgia"; 
 }
 
-char *f_mod_acquisto()
+char* f_mod_acquisto()
 {
     int n=(rand() % 3) + 1;
     if(n==1) return "Online";
