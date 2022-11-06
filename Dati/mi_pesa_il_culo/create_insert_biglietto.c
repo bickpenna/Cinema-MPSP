@@ -32,7 +32,6 @@ int f_giorno(int anno, int mese)
 
 char *f_username()
 {
-    char *nome;
     int n=(rand() %7) + 1;
     if(n==1) return "bickpenna";
     if(n==1) return "ssimone-p";

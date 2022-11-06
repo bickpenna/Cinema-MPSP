@@ -45,7 +45,6 @@ char *f_username()
 
 char *f_testo()
 {
-    char *nome;
     int n=(rand() %5) + 1;
     if(n==1) return "bellissimo film, mi sono emozionato";
     if(n==1) return "capolavoro assoluto, il nuovo 'quarto potere'";
@@ -71,7 +70,8 @@ int main(){
         username=f_username();
         film=(rand() % (17 - 1 + 1)) + 1;
 
-        fscanf(fp, "('%d-%d-%d','%s', '%s', %d),\n", anno, mese, giorno, testo, username, film);
+        fprintf(fp, "('%d-%d-%d','%s', '%s', %d),\n", anno, mese, giorno, testo, username, film);
+
 
     }
 }
