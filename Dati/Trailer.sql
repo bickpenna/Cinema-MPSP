@@ -1,4 +1,5 @@
-INSERT INTO cin.trailer(durata, datauscita, film, proiezione)(
+INSERT INTO cin.trailer(durata, datauscita, film, proiezione)
+(
     VALUES
       (23, '2011-3-22', 3, 349),
       (118, '2021-2-7', 12, 471),
