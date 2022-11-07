@@ -160,5 +160,15 @@ CREATE TABLE cin.Spot(
 
     CONSTRAINT spot_pk PRIMARY KEY (ID_spot),
     CONSTRAINT proiezione_fk FOREIGN KEY (proiezione) REFERENCES cin.proiezione(ID_proiezione)
-)
+);
+/*-------------------------------*/
+
+/**CREA TABELLA Biglietto-Utente**/
+CREATE TABLE cin.BigliettoUtente(
+    Biglietto SERIAL,
+    Username VARCHAR(16), --FK
+
+    CONSTRAINT biglietto_fk FOREIGN KEY (Biglietto) REFERENCES cin.biglietto(id_biglietto),
+    CONSTRAINT cliente_fk FOREIGN KEY  (Username) REFERENCES cin.cliente(username)
+);
 /*-------------------------------*/
