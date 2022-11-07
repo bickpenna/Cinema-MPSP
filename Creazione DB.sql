@@ -131,7 +131,7 @@ CREATE TABLE cin.Proiezione(
 );
 /*-------------------------------*/
 
---Aggiungo chiave esterna Proiezione da cin.proiezione
+--Aggiungo chiave esterna Proiezione da cin.proiezione a cin.biglietto
 ALTER TABLE cin.biglietto
 ADD CONSTRAINT proiezione_fk FOREIGN KEY (Proiezione) REFERENCES cin.proiezione(ID_proiezione);
 

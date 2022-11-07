@@ -1,3 +1,5 @@
+INSERT INTO cin.bigliettoutente(biglietto, username) (
+    VALUES
         (39, 'lucadifassa'),
         (92, 'giorgia'),
         (115, 'Sorgesana'),
@@ -993,3 +995,4 @@
         (24714, 'Santanna'),
         (24756, 'homer'),
         (24772, 'wikipedia')
+);

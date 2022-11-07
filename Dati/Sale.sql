@@ -27,8 +27,6 @@ INSERT INTO cin.sala(numero, schermo, impiantoaudio, impiantovideo, dimensione, 
             (4, 'Ignifugo Norma Europea EN13501-1', 'Yamaha', 'Sony SRX-R510D3', '330', 3),
             (5, 'Ignifugo Norma Europea EN13501-1', 'Sony', 'Sony SRX-R510DG', '210', 3)
 );
-            /*(6, 'Ignifugo Norma Europea EN13501-1', 'Toshiba', 'Sony SRX-R510DF', '2700', 3)
-);
 
 --Sale Cinema "UCI Cinemas Cinepolis Marcianise" ID 4
 INSERT INTO cin.sala(numero, schermo, impiantoaudio, impiantovideo, dimensione, cinema)

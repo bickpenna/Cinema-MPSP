@@ -1,23 +1,28 @@
-INSERT INTO cin.cliente(username, password, dataregistrazione)
-VALUES ('bickpenna', '1234567890', '2022-01-19');
-
-INSERT INTO cin.cliente(username, password, dataregistrazione)
-VALUES ('ssimone-p', '0123456789', '2022-02-20');
-
-INSERT INTO cin.cliente(username, password, dataregistrazione)
-VALUES ('Goku', '1234', '2019-08-15');
-
-INSERT INTO cin.cliente(username, password, dataregistrazione)
-VALUES ('vegeta', 'Principe00', '2019-06-20');
-
-INSERT INTO cin.cliente(username, password, dataregistrazione)
-VALUES ('lorenzo-tecchia', 'jetbrains', '2020-02-05');
-
-INSERT INTO cin.cliente(username, password, dataregistrazione)
-VALUES ('homer', 'maggie', '2019-11-11');
-
-INSERT INTO cin.cliente(username, password, dataregistrazione)
-VALUES ('giorgiovanni', 'pirati', '2019-12-08');
-
-INSERT INTO cin.cliente(username, password, dataregistrazione)
-VALUES ('giorgia', 'dux', '2021-10-28');
+INSERT INTO cin.cliente(username, password, dataregistrazione)(
+    VALUES ('bickpenna', 'RockNRoll', '2022-01-19'),
+           ('ssimone-p', '0123456789', '2022-02-20'),
+           ('Goku', '1234', '2019-08-15'),
+           ('vegeta', 'Principe00', '2019-06-20'),
+           ('lorenzo-tecchia', 'jetbrains', '2020-02-05'),
+           ('homer', 'maggie', '2019-11-11'),
+           ('giorgiovanni', 'pirati', '2019-12-08'),
+           ('giorgia', 'dux', '2021-10-28'),
+           ('stefano', 'bernarda', '2019-12-23'),
+           ('andrew.img', 'paletto', '2022-02-12'),
+           ('lucadifassa', 'scorpione', '2020-01-23'),
+           ('Zeb89', 'lezzoh', '2020-10-12'),
+           ('Stormone', 'yugioh', '2020-12-21'),
+           ('Rambone', 'figurelle', '2022-01-01'),
+           ('Lumix', 'benevento', '2021-01-22'),
+           ('Giovanna', 'alcool', '2019-01-09'),
+           ('Sorgesana', 'fa schifo', '2020-06-22'),
+           ('Santanna','è buona', '2022-04-23'),
+           ('geriko3', 'dragonball', '2021-02-19'),
+           ('GGPOZ', 'viscido', '2022-09-23'),
+           ('reabateon', 'crossfit', '2021-05-29'),
+           ('mariagrazia', 'sadismo', '2022-06-30'),
+           ('accistef', 'piano', '2022-09-20'),
+           ('nutella', 'pane', '2019-04-20'),
+           ('frisk', 'fresco', '2022-10-10'),
+           ('wikipedia', 'libera', '2019-07-10')
+);

@@ -1,3 +1,5 @@
+INSERT INTO cin.biglietto(dataemissione, prezzo, modalita_acq, fila, numero, sala, proiezione) (
+    VALUES
         ('2015-2-7', 43.00, 'Botteghino', 'B', 1, 3, 1),
         ('2015-2-7', 43.00, 'Botteghino', 'F', 6, 3, 1),
         ('2015-2-7', 43.00, 'Botteghino', 'B', 7, 3, 1),
@@ -24770,3 +24772,4 @@
     ('2012-4-17', 36.00, 'Botteghino', 'A', 9, 7, 500),
     ('2012-4-17', 36.00, 'Botteghino', 'A', 5, 7, 500),
     ('2012-4-17', 36.00, 'Prenotato', 'E', 3, 7, 500)
+);

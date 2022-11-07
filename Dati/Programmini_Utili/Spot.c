@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
+#include <string.h>
 
 char *f_azienda()
 {
@@ -21,20 +22,19 @@ char *f_azienda()
     return azienda;
 }
 
-int main()
-{
-    FILE *fp=fopen("insert_spot.txt", "w");
+int main(){
     srand(time(NULL));
-    char *azienda;
-    int durata=0, proiezione=0;
+    FILE *fspot=fopen("insert_spot.txt", "w");
 
-    for(int i=0; i<100; i++)
-    {
-        azienda=f_azienda();
-        durata=rand()%120;
-        proiezione=(rand()%500) + 1;
+    char *aziendaSpot;
+    int durataSpot=0;
 
-        fprintf(fp, "('%s', %d, %d),\n", azienda, durata, proiezione);
+    for(int i=1; i<501; i++){
+        for(int j=0; j<5; j++){
+            aziendaSpot=f_azienda();
+            durataSpot=rand()%120;
+            fprintf(fspot, "('%s', %d, %d),\n", aziendaSpot, durataSpot, i);
+        }
     }
-    fclose(fp);
+    fclose(fspot);
 }
