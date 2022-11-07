@@ -64,11 +64,9 @@ CREATE TABLE cin.Biglietto
     Numero INTEGER,       --FK
     Sala SERIAL,          --FK
 	Proiezione SERIAL,    --FK
-	Username VARCHAR(16), --FK
 
     CONSTRAINT biglietto_pk PRIMARY KEY (ID_Biglietto),
-    CONSTRAINT posto_fk FOREIGN KEY (Fila, Numero, Sala) REFERENCES cin.posto(Fila, Numero, Sala),
-	CONSTRAINT cliente_fk FOREIGN KEY (Username) REFERENCES cin.cliente(username)
+    CONSTRAINT posto_fk FOREIGN KEY (Fila, Numero, Sala) REFERENCES cin.posto(Fila, Numero, Sala)
 );
 
 /**CREA TABELLA FILM**/
