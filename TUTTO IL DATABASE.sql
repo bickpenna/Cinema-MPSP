@@ -112,6 +112,7 @@ CREATE TABLE cin.Recita
     Attore SERIAL,     --FK
     Film   SERIAL,     --FK
 
+    CONSTRAINT recita_pk PRIMARY KEY(Attore, Film),
     CONSTRAINT recita_att_fk  FOREIGN KEY (Attore) REFERENCES cin.Attore(ID_Attore),
     CONSTRAINT recita_film_fk FOREIGN KEY (Film)   REFERENCES cin.Film(ID_Film)
 );
@@ -166,6 +167,7 @@ CREATE TABLE cin.BigliettoUtente(
     Biglietto SERIAL,
     Username VARCHAR(16), --FK
 
+    CONSTRAINT bigliettoutente_pk PRIMARY KEY (Biglietto, Username),
     CONSTRAINT biglietto_fk FOREIGN KEY (Biglietto) REFERENCES cin.biglietto(id_biglietto),
     CONSTRAINT cliente_fk FOREIGN KEY  (Username) REFERENCES cin.cliente(username)
 );
