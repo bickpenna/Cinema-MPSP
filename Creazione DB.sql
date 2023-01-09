@@ -10,6 +10,16 @@ CREATE TABLE cin.Cinema
 
     CONSTRAINT cinema_pk PRIMARY KEY (ID_Cinema)
 );
+
+CREATE TABLE cin.Posto
+(
+    Fila CHAR,             --PK
+    Numero INTEGER,        --PK
+    Sala SERIAL,  --FK     --PK
+
+    CONSTRAINT posto_pk PRIMARY KEY(Fila, Numero, Sala),
+    CONSTRAINT Sala_fk FOREIGN KEY (Sala) REFERENCES cin.Sala(ID_Sala)
+);
 /*-------------------------------*/
 
 
@@ -30,15 +40,7 @@ CREATE TABLE cin.Sala(
 
 
 /**CREA TABELLA POSTO**/
-CREATE TABLE cin.Posto
-(
-    Fila CHAR,             --PK
-    Numero INTEGER,        --PK
-    Sala SERIAL,  --FK     --PK
 
-    CONSTRAINT posto_pk PRIMARY KEY(Fila, Numero, Sala),
-    CONSTRAINT Sala_fk FOREIGN KEY (Sala) REFERENCES cin.Sala(ID_Sala)
-);
 /*-------------------------------*/
 
 /**CREA TABELLA CLIENTE**/
