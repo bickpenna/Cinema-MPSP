@@ -1,4 +1,4 @@
 # Cinema-MPSP
 Cinema Prog
 
-Bisogna aggiornare solo il fottuto LATEX
+L'esercizio è svolto una chiavica
